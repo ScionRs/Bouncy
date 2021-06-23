@@ -16,15 +16,15 @@ $(document).ready(function() {
     })
 
     const tabs = document.querySelectorAll('.about__tab'),
-          tabsContent = document.querySelectorAll('.about__items'),
-          tabsParent = document.querySelector('.about__tabs');
+        tabsContent = document.querySelectorAll('.about__items'),
+        tabsParent = document.querySelector('.about__tabs');
 
     function hideTabContent() {
         tabsContent.forEach(item => {
-           item.style.display = 'none';
+            item.style.display = 'none';
         });
         tabs.forEach(item => {
-           item.classList.remove('about__tab-active');
+            item.classList.remove('about__tab-active');
         });
     }
     function showTabContent(i = 0) {
@@ -35,15 +35,15 @@ $(document).ready(function() {
     showTabContent();
 
     tabsParent.addEventListener('click',(event) => {
-          const target = event.target;
+        const target = event.target;
 
-          if(target && target.classList.contains('about__tab')){
-             tabs.forEach((item,i) =>{
-                 if (target == item){
-                     hideTabContent();
-                     showTabContent(i);
-                 }
-             });
-    }
+        if(target && target.classList.contains('about__tab')){
+            tabs.forEach((item,i) =>{
+                if (target == item){
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+        }
     });
 })
