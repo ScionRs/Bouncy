@@ -1,0 +1,80 @@
+.service
+  padding: $titlemargintop 0
+  background-color: $lightred
+  &__wrapper
+    display: flex
+    margin-top: 3rem
+  &__tabs
+    display: flex
+    flex-direction: column
+  &__tab
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 60px
+    height: 60px
+    background-color: $gray
+    margin-right: 1.8rem
+    outline: none !important
+    border: none
+    margin-bottom: 1rem
+    &-active
+      background-color: $green
+    &:hover
+      background-color: $green
+      transition: 1s all
+    &-icon
+      font-size: 1.8rem
+      color: white
+  &__items
+    display: flex
+  &__item
+    display: none
+    &-active
+      display: flex
+  &__description
+    width: 27rem
+    font-family: "Open Sans",sans-serif
+    font-weight: 400
+    margin-left: 1.5rem
+    &-title
+      font-size: 1.2rem
+      font-weight: 400
+      color: black
+      padding-bottom: 1.5rem
+    &-subtitle
+      font-size: 1rem
+      color: $gray
+      word-spacing: 3px
+      line-height: 1.8rem
+      padding-bottom: 1.5rem
+    &-text
+      font-size: 0.9rem
+      word-spacing: 3px
+      line-height: 1.3rem
+      color: $gray
+  &__circles
+    display: flex
+    margin-left: 3rem
+    margin-top: 2rem
+  &__circle
+    margin-right: 2rem
+    &-item
+      width: 123px
+      height: 123px
+      border-radius: 50%
+      border: 6px solid $green
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      font-size: 2rem
+      color: $gray
+      sub
+        font-size: 1rem
+    &-title
+      font-family: "Roboto Light",sans-serif
+      text-align: center
+      padding-top: 1rem
+      color: $gray
