@@ -14,36 +14,62 @@ $(document).ready(function() {
             menu.classList.toggle('header__menu-active');
         })
     })
+    /*
+        const tabs = document.querySelectorAll('.about__tab'),
+            tabsContent = document.querySelectorAll('.about__items'),
+            tabsParent = document.querySelector('.about__tabs');
 
-    const tabs = document.querySelectorAll('.about__tab'),
-        tabsContent = document.querySelectorAll('.about__items'),
-        tabsParent = document.querySelector('.about__tabs');
-
-    function hideTabContent() {
-        tabsContent.forEach(item => {
-            item.style.display = 'none';
-        });
-        tabs.forEach(item => {
-            item.classList.remove('about__tab-active');
-        });
-    }
-    function showTabContent(i = 0) {
-        tabsContent[i].style.display = 'flex';
-        tabs[i].classList.add('about__tab-active');
-    }
-    hideTabContent();
-    showTabContent();
-
-    tabsParent.addEventListener('click',(event) => {
-        const target = event.target;
-
-        if(target && target.classList.contains('about__tab')){
-            tabs.forEach((item,i) =>{
-                if (target == item){
-                    hideTabContent();
-                    showTabContent(i);
-                }
+        function hideTabContent() {
+            tabsContent.forEach(item => {
+                item.style.display = 'none';
+            });
+            tabs.forEach(item => {
+                item.classList.remove('about__tab-active');
             });
         }
-    });
+        function showTabContent(i = 0) {
+            tabsContent[i].style.display = 'flex';
+            tabs[i].classList.add('about__tab-active');
+        }
+        hideTabContent();
+        showTabContent();
+
+        tabsParent.addEventListener('click',(event) => {
+            const target = event.target;
+
+            if(target && target.classList.contains('about__tab')){
+                tabs.forEach((item,i) =>{
+                    if (target == item){
+                        hideTabContent();
+                        showTabContent(i);
+                    }
+                });
+            }
+        });*/
+    const tabsBtn = document.querySelectorAll(".about__tab");
+    const tabsItems = document.querySelectorAll(".about__items");
+
+    tabsBtn.forEach(onTabClick);
+
+    function onTabClick(item) {
+        item.addEventListener("click", function () {
+            let currentBtn = item;
+            let tabId = currentBtn.getAttribute("data-tab");
+            let currentTab = document.querySelector(tabId);
+            console.log(tabId);
+
+            if (!currentTab.classList.contains('about__tab-active')) {
+                tabsBtn.forEach(function (item) {
+                    item.classList.remove('about__tab-active');
+                })
+
+                tabsItems.forEach(function (item) {
+                    item.classList.remove('about__items-active');
+                })
+
+                currentBtn.classList.add('about__tab-active');
+                currentTab.classList.add('about__items-active');
+            }
+        });
+    }
 })

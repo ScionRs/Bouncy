@@ -60,12 +60,12 @@
     <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
     
     <div class="about__tabs">
-        <li class="about__tab about__tab-active"><i class="far fa-heart about__tab-icon"></i></li>
-        <li class="about__tab"><i class="fas fa-mouse  about__tab-icon"></i></li>
-        <li class="about__tab"><i class="far fa-lightbulb about__tab-icon"></i></li>
+        <button type="button" class="about__tab about__tab-active" data-tab="#tab_1"><i class="far fa-heart about__tab-icon"></i></button>
+        <button type="button" class="about__tab" data-tab="#tab_2"><i class="fas fa-mouse  about__tab-icon"></i></button>
+        <button type="button" class="about__tab" data-tab="#tab_3"><i class="far fa-lightbulb about__tab-icon"></i></button>
     </div>
 
-        <div class="about__items">
+        <div class="about__items about__items-active" id="tab_1">
             <div class="about__item">
                 <h3 class="about__title">
                     Creative Ideas
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="about__items">
+        <div class="about__items" id="tab_2">
             <div class="about__item">
                 <h3 class="about__title">
                     Creative Ideas2
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="about__items">
+        <div class="about__items" id="tab_3">
             <div class="about__item">
                 <h3 class="about__title">
                     Creative Ideas3
@@ -131,6 +131,21 @@
         <div class="project__footer">
             <div class="project__footer-title">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </div>
             <button class="project__footer-btn">Submit Now</button>
+        </div>
+    </div>
+</section>
+
+<section class="service">
+    <div class="container">
+        <h2 class="title">Our Services</h2>
+        <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
+        <div class="service__wrapper">
+            <div class="service__tabs">
+                <button type="button" class="service__tab service__tab-active" data-tab="#tab_1"><i class="far fa-heart service__tab-icon"></i></button>
+                <button type="button" class="service__tab" data-tab="#tab_2"><i class="fas fa-mouse  service__tab-icon"></i></button>
+                <button type="button" class="service__tab" data-tab="#tab_3"><i class="far fa-lightbulb service__tab-icon"></i></button>
+                <button type="button" class="service__tab" data-tab="#tab_4"><i class="far fa-lightbulb service__tab-icon"></i></button>
+            </div>
         </div>
     </div>
 </section>
