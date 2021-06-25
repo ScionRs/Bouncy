@@ -35,6 +35,45 @@
   .promo
     &__description
       margin-right: 6rem
+  .about
+    &__left
+      width: 15rem
+      margin-right: 2rem
+    &__right
+      width: 30rem
+      font-size: 0.8rem
+  .project
+    &__item
+      &:first-child
+        width: 600px
+    &__footer
+      &-title
+        font-size: 1rem
+        margin-left: 1rem
+      &-btn
+        margin-right: 1rem
+  .service
+    &__items
+      margin-top: 3rem
+    &__wrapper
+      flex-direction: column
+    &__tabs
+      flex-direction: row
+      justify-content: center
+    &__description
+      width: 21rem
+    &__circle
+      margin-right: 1rem
+      &-item
+        width: 100px
+        height: 100px
+        font-size: 1.5rem
+  .impressed
+    &__description
+      &-title
+        font-size: 1.2rem
+    &__img
+      margin-left: 3rem
 
 @media (max-width: 767px)
   .header
@@ -94,6 +133,40 @@
       font-size: 1.2rem
     &__text
       font-size: 0.8rem
+  .about
+    &__title
+      text-align: center
+    &__items
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__left
+      margin-right: 0
+      width: 30rem
+  .project
+    &__item
+      &:first-child
+        width: 500px
+    &__footer
+      &-btn
+        width: 160px
+        font-size: 0.8rem
+  .service
+    &__circles
+      flex-direction: column
+      margin-top: 0
+      margin-left: 1rem
+
+    &__description
+      width: 20rem
+      &-subtitle
+        font-size: 0.9rem
+      &-text
+        padding-top: 1rem
+  .impressed
+    &__img
+      width: 250px
+      height: 250px
 
 @media (max-width: 576px)
   .promo
@@ -106,3 +179,39 @@
       text-align: center
     &__img
       display: none
+  .about
+    &__left
+      width: 18rem
+    &__right
+      width: 18rem
+  .project
+    &__items
+      flex-direction: column
+    &__item
+      &:first-child
+        width: 300px
+    &__footer
+      display: none
+  .service
+    &__description
+      width: 16rem
+    &__circles
+      margin-top: 2rem
+    &__circle
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__tab
+      width: 50px
+      height: 50px
+    &__item
+      flex-direction: column
+  .impressed
+    height: auto
+    padding-bottom: 1rem
+    &__description
+      width: auto
+    &__wrapper
+      display: flex
+      flex-direction: column-reverse
