@@ -72,4 +72,31 @@ $(document).ready(function() {
             }
         });
     }
+
+    const serviceTabsBtn = document.querySelectorAll(".service__tab");
+    const serviceTabsItems = document.querySelectorAll(".service__item");
+
+    serviceTabsBtn.forEach(onServiceTabClick);
+
+    function onServiceTabClick(item) {
+        item.addEventListener("click", function () {
+            let currentBtn = item;
+            let tabId = currentBtn.getAttribute("data-tab");
+            let currentTab = document.querySelector(tabId);
+            console.log(tabId);
+
+            if (!currentTab.classList.contains('service__tab-active')) {
+                serviceTabsBtn.forEach(function (item) {
+                    item.classList.remove('service__tab-active');
+                })
+
+                serviceTabsItems.forEach(function (item) {
+                    item.classList.remove('service__item-active');
+                })
+
+                currentBtn.classList.add('service__tab-active');
+                currentTab.classList.add('service__item-active');
+            }
+        });
+    }
 })
