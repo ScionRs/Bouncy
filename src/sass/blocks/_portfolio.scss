@@ -1,0 +1,80 @@
+.portfolio {
+  padding: $titlemargintop 0;
+  display: flex;
+  background-color: $lightred;
+  &__tabs{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+  &__tab{
+    padding: 20px;
+    cursor: pointer;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-template-rows: repeat(9, 150px);
+    gap: 10px;
+    grid-template-areas:
+            "one two three four"
+            "one six three four"
+            "one six seven four"
+            "five six seven eight"
+            "five ten seven twelve"
+            "five ten eleven twelve"
+            "nine ten eleven twelve";
+
+  }
+  &__item{
+    &-1{
+      grid-area: one;
+      background: url('../img/portfolio/img1.jpg') center (center / cover) no-repeat;
+    }
+    &-2{
+      grid-area: two;
+      background: url('../img/portfolio/img2.jpg') center (center / cover) no-repeat;
+    }
+    &-3{
+      grid-area: three;
+      background: url('../img/portfolio/img3.jpg') center (center / cover) no-repeat;
+    }
+    &-4{
+      grid-area: four;
+      background: url('../img/portfolio/img4.jpg') center (center / cover) no-repeat;
+    }
+    &-5{
+      grid-area: five;
+      background: url('../img/portfolio/img5.jpg') center (center / cover) no-repeat;
+    }
+    &-6{
+      grid-area: six;
+      background: url('../img/portfolio/img6.jpg') center (center / cover) no-repeat;
+    }
+    &-7{
+      grid-area: seven;
+      background: url('../img/portfolio/img7.jpg') center (center / cover) no-repeat;
+    }
+    &-8{
+      grid-area: eight;
+      background: url('../img/portfolio/img8.jpg') center (center / cover) no-repeat;
+    }
+    &-9{
+      grid-area: nine;
+      background: url('../img/portfolio/img9.jpg') center (center / cover) no-repeat;
+    }
+    &-10{
+      grid-area: ten;
+      background: url('../img/portfolio/img10.jpg') center (center / cover) no-repeat;
+    }
+    &-11{
+      grid-area: eleven;
+      background: url('../img/portfolio/img11.jpg') center (center / cover) no-repeat;
+    }
+    &-12{
+      grid-area: twelve;
+      background: url('../img/portfolio/img12.jpg') center (center / cover) no-repeat;
+    }
+  }
+
+}
