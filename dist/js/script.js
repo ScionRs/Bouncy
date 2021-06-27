@@ -48,9 +48,11 @@ $(document).ready(function() {
         });*/
     const tabsBtn = document.querySelectorAll(".about__tab");
     const tabsItems = document.querySelectorAll(".about__items");
+    const serviceBtn = document.querySelectorAll(".service__tab");
+    const serviceItems = document.querySelectorAll(".service__item");
 
     tabsBtn.forEach(onTabClick);
-
+    serviceBtn.forEach(onServiceTabClick);
     function onTabClick(item) {
         item.addEventListener("click", function () {
             let currentBtn = item;
@@ -69,6 +71,28 @@ $(document).ready(function() {
 
                 currentBtn.classList.add('about__tab-active');
                 currentTab.classList.add('about__items-active');
+            }
+        });
+    }
+
+    function onServiceTabClick(item) {
+        item.addEventListener("click", function () {
+            let currentBtn = item;
+            let tabId = currentBtn.getAttribute("data-tab");
+            let currentTab = document.querySelector(tabId);
+            console.log(tabId);
+
+            if (!currentTab.classList.contains('service__tab-active')) {
+                serviceBtn.forEach(function (item) {
+                    item.classList.remove('service__tab-active');
+                })
+
+                serviceItems.forEach(function (item) {
+                    item.classList.remove('service__item-active');
+                })
+
+                currentBtn.classList.add('service__tab-active');
+                currentTab.classList.add('service__item-active');
             }
         });
     }

@@ -13,7 +13,7 @@
   }
   &__items{
     display: grid;
-    grid-template-columns: repeat(4, 260px);
+    grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(9, 150px);
     gap: 10px;
     grid-template-areas:

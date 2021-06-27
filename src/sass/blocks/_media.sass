@@ -23,6 +23,9 @@
       width: 22rem
     &__circles
       margin-left: 2rem
+  .portfolio
+    &__items
+      grid-template-columns: repeat(4, 200px)
 
 @media (max-width: 991px)
   .header
@@ -74,6 +77,9 @@
         font-size: 1.2rem
     &__img
       margin-left: 3rem
+  .portfolio
+    &__items
+      grid-template-columns: repeat(2, 150px)
 
 @media (max-width: 767px)
   .header
@@ -167,6 +173,16 @@
     &__img
       width: 250px
       height: 250px
+  .portfolio
+    &__tab
+      padding: 10px
+    &__items
+      grid-template-columns: repeat(2, 250px)
+      grid-template-rows: repeat(12, 150px)
+      justify-content: center
+      grid-template-areas: "one two" "one two" "three four" "three four" "five six" "five six" "seven eight" "seven eight" "nine ten" "nine ten" "eleven twelve" "eleven twelve"
+
+
 
 @media (max-width: 576px)
   .promo
@@ -215,3 +231,12 @@
     &__wrapper
       display: flex
       flex-direction: column-reverse
+  .portfolio
+    &__tabs
+      flex-direction: column
+      align-items: center
+    &__items
+      grid-template-columns: repeat(1, 290px)
+      grid-template-rows: repeat(12, 150px)
+      justify-content: center
+      grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten" "eleven" "twelve"
