@@ -181,6 +181,16 @@
       grid-template-rows: repeat(12, 150px)
       justify-content: center
       grid-template-areas: "one two" "one two" "three four" "three four" "five six" "five six" "seven eight" "seven eight" "nine ten" "nine ten" "eleven twelve" "eleven twelve"
+  .team
+    &__feature
+      width: auto
+      padding: 0 0.5rem
+    &__indicators
+      width: auto
+    &__indicator
+      width: auto
+      &-line
+        width: auto
 
 
 
@@ -244,6 +254,22 @@
       &-title
         font-size: 1rem
   .team
+    &__item
+      flex-direction: column
+    &__feature
+      padding: 0
+      padding-top: 1rem
     &__footer
+      &-title
+        font-size: 1rem
+  .testimonials
+    &__item
+      flex-direction: column
+    &__description
+      margin-top: 1rem
+      width: auto
+      &-text
+        text-align: center
+        padding-right: 1rem
       &-title
         font-size: 1rem
