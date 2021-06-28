@@ -99,7 +99,26 @@ $(document).ready(function() {
 
     $('.carousel__team').slick({
         speed: 500,
-        dots: false,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    dots: false,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+
+    $('.carousel__testimonials').slick({
+        speed: 500,
+        dots: true,
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
