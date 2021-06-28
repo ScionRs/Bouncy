@@ -96,4 +96,24 @@ $(document).ready(function() {
             }
         });
     }
+
+    $('.carousel__team').slick({
+        speed: 500,
+        dots: false,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    dots: false,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+
 })
