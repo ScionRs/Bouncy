@@ -50,8 +50,6 @@ $(document).ready(function() {
     const tabsItems = document.querySelectorAll(".about__items");
     const serviceBtn = document.querySelectorAll(".service__tab");
     const serviceItems = document.querySelectorAll(".service__item");
-    const newsBtn = document.querySelectorAll(".news__tab");
-    const newsItems = document.querySelectorAll(".news__item");
 
     tabsBtn.forEach(onTabClick);
     serviceBtn.forEach(onServiceTabClick);
@@ -95,28 +93,6 @@ $(document).ready(function() {
 
                 currentBtn.classList.add('service__tab-active');
                 currentTab.classList.add('service__item-active');
-            }
-        });
-    }
-    newsBtn.forEach(onNewsTabClick);
-    function onNewsTabClick(item) {
-        item.addEventListener("click", function () {
-            let currentBtn = item;
-            let tabId = currentBtn.getAttribute("data-tab");
-            let currentTab = document.querySelector(tabId);
-            console.log(tabId);
-
-            if (!currentTab.classList.contains('news__tab-active')) {
-                newsBtn.forEach(function (item) {
-                    item.classList.remove('news__tab-active');
-                })
-
-                newsItems.forEach(function (item) {
-                    item.classList.remove('news__item-active');
-                })
-
-                currentBtn.classList.add('news__tab-active');
-                currentTab.classList.add('news__item-active');
             }
         });
     }
