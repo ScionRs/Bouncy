@@ -13,12 +13,12 @@
       <div class="header__logo">Bouncy</div>
         <ul class="header__menu">
             <li class="header__item"><a href="" class="header__item-link">Hello</a></li>
-            <li class="header__item"><a href="" class="header__item-link">About</a></li>
-            <li class="header__item"><a href="" class="header__item-link">Services</a></li>
-            <li class="header__item"><a href="" class="header__item-link">Portfolio</a></li>
-            <li class="header__item"><a href="" class="header__item-link">Team</a></li>
-            <li class="header__item"><a href="" class="header__item-link">Blog</a></li>
-            <li class="header__item"><a href="" class="header__item-link">Contact</a></li>
+            <li class="header__item"><a href="#about" class="header__item-link">About</a></li>
+            <li class="header__item"><a href="#service" class="header__item-link">Services</a></li>
+            <li class="header__item"><a href="#portfolio" class="header__item-link">Portfolio</a></li>
+            <li class="header__item"><a href="#team" class="header__item-link">Team</a></li>
+            <li class="header__item"><a href="#blog" class="header__item-link">Blog</a></li>
+            <li class="header__item"><a href="#contact" class="header__item-link">Contact</a></li>
         </ul>
             <div class="hamburger">
                 <span></span>
@@ -54,7 +54,7 @@
     </div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
     <div class="container">
     <h2 class="title">DetailS ABOUT BOUNCY</h2>
     <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
@@ -121,7 +121,7 @@
 
 <section class="project">
     <div class="container">
-        <h2 class="title">DetailS ABOUT BOUNCY</h2>
+        <h2 class="title">FEATURED PROJECTS</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
         <div class="project__items">
             <div class="project__item"><a href="img/featuredprojects/whiskey.png"  class="project__img project__img-1"><h2 class="project__img-title" id="project__custom">Classic</h2></a></div>
@@ -135,7 +135,7 @@
     </div>
 </section>
 
-<section class="service">
+<section class="service" id="service">
     <div class="container">
         <h2 class="title">Our Services</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
@@ -270,7 +270,7 @@
     </div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
     <div class="container">
         <h2 class="title">THE PORTFOLIO</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
@@ -284,7 +284,16 @@
             <li class="portfolio__tab" data-tab="#tab_p_7">Wordpress</li>
         </ul>
         <div class="portfolio__items portfolio__items-active" id="tab_p_1">
-            <div class="portfolio__item portfolio__item-1"></div>
+            <div class="portfolio__item portfolio__item-1">
+                <div class="portfolio__wrapper">
+                    <div class="portfolio__description">
+                    <h2 class="portfolio__wrapper-title">Title here</h2>
+                    <hr class="portfolio__wrapper-line">
+                    <p class="portfolio__wrapper-text">At vero eos et accusamus et iusto odio
+                        dignissimos ducimus qui blanditiis praesentium</p>
+                    </div>
+                </div>
+            </div>
             <div class="portfolio__item portfolio__item-2"></div>
             <div class="portfolio__item portfolio__item-3"></div>
             <div class="portfolio__item portfolio__item-4"></div>
@@ -358,7 +367,7 @@
     </div>
 </section>
 
-<section class="team">
+<section class="team" id="team">
     <div class="container">
         <h2 class="title">THE TEAM</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
@@ -556,9 +565,9 @@
     </div>
 </section>
 
-<section class="price">
+<section class="price" id="blog">
     <div class="container">
-        <h2 class="title">THE PORTFOLIO</h2>
+        <h2 class="title">Our Price</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
         <div class="price__items">
             <div class="price__item">
@@ -603,13 +612,13 @@
     </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
     <div class="container">
         <h2 class="title">Testimonials</h2>
         <h3 class="subtitle">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br/> blanditiis praesentium</h3>
         <div class="contact__items">
             <div class="contact__item">
-                <div class="contact__img contact__img-1"></div>
+                <div class="contact__img contact__img-1"><i class="far fa-envelope contact__icon"></i></div>
                 <h2 class="contact__title">EMAIL</h2>
                 <h3 class="contact__subtitle">
                     hello@codecafe.com
@@ -617,7 +626,7 @@
                 </h3>
             </div>
             <div class="contact__item">
-                <div class="contact__img contact__img-2"></div>
+                <div class="contact__img contact__img-2"><i class="fas fa-map-marker-alt contact__icon"></i></div>
                 <h2 class="contact__title">OUR OFFICE</h2>
                 <h3 class="contact__subtitle">
                     240 Bhatikhana, 8200 Barisal
@@ -625,7 +634,7 @@
                 </h3>
             </div>
             <div class="contact__item">
-                <div class="contact__img contact__img-3"></div>
+                <div class="contact__img contact__img-3"><i class="fas fa-phone-alt contact__icon"></i></div>
                 <h2 class="contact__title">PHONE</h2>
                 <h3 class="contact__subtitle">
                     +00 11 66 99 66 44 <br/>
