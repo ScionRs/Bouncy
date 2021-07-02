@@ -50,9 +50,16 @@ $(document).ready(function() {
     const tabsItems = document.querySelectorAll(".about__items");
     const serviceBtn = document.querySelectorAll(".service__tab");
     const serviceItems = document.querySelectorAll(".service__item");
+    const newsBtn = document.querySelectorAll(".news__tab");
+    const newsItems = document.querySelectorAll(".news__item");
+    const portfolioBtn = document.querySelectorAll(".portfolio__tab");
+    const portfolioItems = document.querySelectorAll(".portfolio__items");
 
     tabsBtn.forEach(onTabClick);
     serviceBtn.forEach(onServiceTabClick);
+    newsBtn.forEach(onNewsTabClick);
+    portfolioBtn.forEach(onPortfolioTabClick);
+
     function onTabClick(item) {
         item.addEventListener("click", function () {
             let currentBtn = item;
@@ -93,6 +100,50 @@ $(document).ready(function() {
 
                 currentBtn.classList.add('service__tab-active');
                 currentTab.classList.add('service__item-active');
+            }
+        });
+    }
+
+    function onNewsTabClick(item) {
+        item.addEventListener("click", function () {
+            let currentBtn = item;
+            let tabId = currentBtn.getAttribute("data-tab");
+            let currentTab = document.querySelector(tabId);
+            console.log(tabId);
+
+            if (!currentTab.classList.contains('news__tab-active')) {
+                newsBtn.forEach(function (item) {
+                    item.classList.remove('news__tab-active');
+                })
+
+                newsItems.forEach(function (item) {
+                    item.classList.remove('news__item-active');
+                })
+
+                currentBtn.classList.add('news__tab-active');
+                currentTab.classList.add('news__item-active');
+            }
+        });
+    }
+
+    function onPortfolioTabClick(item) {
+        item.addEventListener("click", function () {
+            let currentBtn = item;
+            let tabId = currentBtn.getAttribute("data-tab");
+            let currentTab = document.querySelector(tabId);
+            console.log(tabId);
+
+            if (!currentTab.classList.contains('portfolio__tab-active')) {
+                portfolioBtn.forEach(function (item) {
+                    item.classList.remove('portfolio__tab-active');
+                })
+
+                portfolioItems.forEach(function (item) {
+                    item.classList.remove('portfolio__items-active');
+                })
+
+                currentBtn.classList.add('portfolio__tab-active');
+                currentTab.classList.add('portfolio__items-active');
             }
         });
     }
