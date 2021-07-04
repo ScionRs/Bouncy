@@ -59,6 +59,7 @@ $(document).ready(function() {
     serviceBtn.forEach(onServiceTabClick);
     newsBtn.forEach(onNewsTabClick);
     portfolioBtn.forEach(onPortfolioTabClick);
+
     function onTabClick(item) {
         item.addEventListener("click", function () {
             let currentBtn = item;
